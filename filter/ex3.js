@@ -23,7 +23,17 @@ Sortie attendue:
 
  */
 
+function filterStarks(elem) {
+  name = elem.split(' ');
+  if (name[1] === 'Stark') {
+    return elem;
+  }
+  return null;
+}
+
 function keepStarks(names) {
+  const result = names.filter(filterStarks);
+  return result;
 }
 
 // Ne pas modifier l'export
